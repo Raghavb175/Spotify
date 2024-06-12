@@ -3,38 +3,47 @@
     color: white;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-color: black;
     color: #ffffff;
 }
-.left{
+
+.left {
     width: 25vw;
 }
-.upper-left-box{
+
+.upper-left-box {
     padding: 20px;
     min-height: 25vh;
     padding: 10px;
 
 }
-.lower-left-box{
-min-height: 75vh;
-position: relative;
+
+.lower-left-box {
+    min-height: 75vh;
+    position: relative;
 }
-.left{
+
+.left {
     width: 40vw;
 }
-.left li{
-    
+
+.left li {
+    padding-top: 15px;
+    font-size: 16px;
     gap: 15px;
     display: flex;
-    width:25px;
+    width: 20px;
     list-style: none;
 }
-.heading{
+
+.heading {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -45,34 +54,77 @@ position: relative;
     font-size: 12px;
     /* justify-content: space-between; */
 }
-   
-.heading img{
+
+.heading img {
     width: 30px;
-  
-}     
-.heading h2{
-/* justify-content: left; */
+
 }
 
-.footer{
+.heading h2 {
+    /* justify-content: left; */
+}
+
+.footer {
     display: flex;
     color: grey;
     font-size: 10px;
     gap: 13px;
     position: absolute;
     bottom: 0;
-    }
-    .footer a{
-    color:grey
-    }
-    
-.right{
-    width:75vw
 }
-.header{
+
+.footer a {
+    color: grey
+}
+
+.right {
+
+    width: 75vw
+}
+
+.header {
+    background-color: rgb(34, 34, 34);
     display: flex;
     justify-content: space-between;
 }
-.header > *{
+
+.header>* {
     padding: 20px;
+}
+
+.spotify-playlist {
+    /* padding: 200px; */
+    padding: 16px;
+}
+
+.spotify-playlist .card {
+    background-color: rgb(63, 63, 63);
+    text-align: center;
+    width: 200px;
+    border: 2px solid rgb(244, 244, 244);
+    padding: 5px;
+    background-repeat: 5px;
+}
+
+.card img {
+    /* border-radius: 50%; */
+    /* padding: 50px; */
+    width: 100%;
+    object-fit: contain;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.card>* {
+    padding-top: 15px;
+}
+
+.card h2 {
+    font-size: 15px;
+    overflow: hidden;
 }
