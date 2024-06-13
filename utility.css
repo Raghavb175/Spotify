@@ -1,3 +1,7 @@
+
+.green{
+    background-color:#349534;
+}
 .border{
     border: 2px solid #000000;
 }
@@ -28,3 +32,24 @@
     margin: 4px;
     color: none;
 }
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333; /* Dark grey */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Grey */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey */
+  }
+  
