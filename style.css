@@ -57,8 +57,18 @@
 
 .heading img {
     width: 30px;
-
 }
+.songlist {
+    color: rgb(255, 127, 127);
+    display: inline; /* This can be removed if not needed */
+}
+
+.songlist ul li {
+    display: inline-block;
+    list-style-type: decimal;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
 
 /* .heading h2 { 
     justify-content: left;
@@ -81,7 +91,7 @@
 
 .right {
     width: 75vw;
-    
+    position: relative;
 }
 
 .header {
@@ -184,4 +194,20 @@
 .card:hover .play{
     top: 157px;
     opacity: 1;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+    height: 6%;
+    opacity:0.8;
+    display: flex;
+    gap: 1.1rem;
+    justify-content:center;
+    align-items: center;
+}
+
+.playbar svg{
+    cursor: pointer;
 }
