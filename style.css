@@ -40,7 +40,7 @@
     gap: 15px;
     display: flex;
     width: 20px;
-    list-style: none;
+    /* list-style: none; */
 }
 
 .heading {
@@ -58,15 +58,19 @@
 .heading img {
     width: 30px;
 }
-.songlist {
+.songList {
     color: rgb(255, 127, 127);
     display: inline; /* This can be removed if not needed */
 }
 
-.songlist ul li {
-    display: inline-block;
+.songList ul li{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
     list-style-type: decimal;
-    margin-right: 10px; /* Adjust spacing as needed */
+    margin-right: 10px; 
+    padding-left: 10px;/* Adjust spacing as needed */
+    cursor: pointer;
 }
 
 
