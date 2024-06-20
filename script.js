@@ -105,6 +105,8 @@ async function main() {
 
     songUL.innerHTML = songListHTML; // changed2: Set innerHTML once
 
+
+    /*
     // Check if there are any songs in the array
     if (songs.length > 0) {
         // Play the first song
@@ -120,7 +122,10 @@ async function main() {
         });
     } else {
         console.log('No songs found to play.');
-    }
+    } */
+   
+
+
 }
 
 main().catch(error => {
