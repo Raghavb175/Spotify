@@ -64,14 +64,17 @@ body {
 }
 
 .songList {
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
     display: flex;
     overflow: scroll;
     overflow-x: hidden;
     max-height: 50vh;
 }
-
+.songList div{
+    display: flex;
+    justify-content:left;
+}
 .songList ul li {
     border: 1px solid rgba(255, 255, 255, 0.277);
     justify-content: space-between;
