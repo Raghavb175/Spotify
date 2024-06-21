@@ -16,13 +16,14 @@
 //             songs.push(decodeURIComponent(element.href.split('/').pop().replace('.mp3', ''))); // Decode and extract song name
 //         });
 //     } catch (error) {
-//         console.error('Error fetching or parsing data:', error);
-//         return []; // Return an empty array in case of error
-//     }
-
-//     return songs; // Return the array of song URLs
-// }
-
+    //         console.error('Error fetching or parsing data:', error);
+    //         return []; // Return an empty array in case of error
+    //     }
+    
+    //     return songs; // Return the array of song URLs
+    // }
+    let currentSong = new Audio();
+    
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/")
     let response = await a.text();
@@ -39,9 +40,10 @@ async function getSongs() {
     return songs
 }
 const playMusic = (track) => {
-    let audio = new Audio("/songs/" + track);
-    audio.play()
-    console.log("Playing:", audio.src); // Log the URL being attempted
+    // let audio = new Audio("/songs/" + track);
+    currentSong.src = "/songs/" + track
+    currentSong.play()
+    console.log("Playing:", currentSong.src); // Log the URL being attempted
 }
 
 async function main() {
