@@ -76,6 +76,15 @@ async function main() {
         })
     });
 
+    // attack an event listener to previous, play and next
+    playbtn.addEventListener("click", ()=>{
+        if(currentSong.pause()){
+            currentSong.play()
+        }else{
+            currentSong.pause()
+        }
+    })
+
     // Attach event listeners after elements are rendered
     // Array.from(songUL.getElementsByTagName("li")).forEach(e => {
     //     e.addEventListener("click", () => {
