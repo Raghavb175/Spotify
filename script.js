@@ -54,19 +54,22 @@ async function getSongs() {
     }
     return songs
 }
-const playMusic = (track) => {
+const playMusic = (track, pause=false) => {
     // let audio = new Audio("/songs/" + track);
     currentSong.src = "/songs/" + track
-    currentSong.play()
+    if(!pause){
+        currentSong.play()
+        playbtn.src = "/utils/Symbols/pause.svg";
+    }
     console.log("Playing:", currentSong.src); // Log the URL being attempted
-    playbtn.src = "/utils/Symbols/pause.svg";
-    document.getElementById("songinfo").innerHTML=track
+    document.getElementById("songinfo").innerHTML=decodeURI(track)
     document.getElementById("songtime").innerHTML="00/00"
 }
 
 async function main() {
     // Get list of all the songs
     let songs = await getSongs();
+    playMusic(songs[0],true)
     console.log(songs); // Log the array of song URLs
 
     let songUL = document.querySelector(".songList ul"); // Get the <ul> element inside .songList
@@ -106,9 +109,9 @@ async function main() {
     });
     
     currentSong.addEventListener("timeupdate", () =>{
-        console.log(currentSong.currentTime,currentSong.duration)
+        // console.log(currentSong.currentTime,currentSong.duration)
         document.getElementById("songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)}/${secondsToMinutesSeconds(currentSong.duration)}`
-
+        document.querySelector(".circle").style.left=(currentSong.currentTime/currentSong.duration)*100 + "%"
     })
     // let next;
 

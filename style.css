@@ -214,16 +214,22 @@ body {
     opacity: 1;
 }
 
-.play-buttons{
-    width: 100%;
-    padding-bottom: 0.5rem;
-    bottom: 1;
+.abovebar{
     display: flex;
-    position: absolute;
-    /* align-items: baseline; */
-    justify-content: center;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-between;
+}
+.play-buttons{
+    cursor: pointer;
+    position: relative;
+   
 }
 
+.infobox{
+    position: relative; 
+    color: black;
+ }
 .playbar {
     display: flex;
     flex-direction: column;
@@ -237,20 +243,6 @@ body {
     align-items: center;
 }
 
-.playbar svg {
-
-    cursor: pointer;
-}
- .infobox{
-    font-weight:200;
-    font-size: 0.8rem;
-    width: 150px;
-    left: -10%; /* change to 4-10% in mediascreen */
-    align-items: center;
-    text-align:left;
-    position: relative;
-    color: black;
- }
 .seekbar {
     position: absolute;
     /* display: flex; */
