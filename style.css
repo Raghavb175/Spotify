@@ -214,7 +214,8 @@ body {
     opacity: 1;
 }
 
-.play-buttons {
+.play-buttons{
+    width: 100%;
     padding-bottom: 0.5rem;
     bottom: 1;
     display: flex;
@@ -237,9 +238,19 @@ body {
 }
 
 .playbar svg {
+
     cursor: pointer;
 }
-
+ .infobox{
+    font-weight:200;
+    font-size: 0.8rem;
+    width: 150px;
+    left: -10%; /* change to 4-10% in mediascreen */
+    align-items: center;
+    text-align:left;
+    position: relative;
+    color: black;
+ }
 .seekbar {
     position: absolute;
     /* display: flex; */

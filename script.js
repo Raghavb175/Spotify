@@ -24,6 +24,21 @@
     // }
     let currentSong = new Audio();
     
+    function secondsToMinutesSeconds(seconds) {
+        if (isNaN(seconds) || seconds < 0) {
+            return "00:00";
+        }
+    
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+    
+        const formattedMinutes = String(minutes).padStart(2, '0');
+        const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+    
+        return `${formattedMinutes}:${formattedSeconds}`;
+    }
+
+
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:5500/songs/")
     let response = await a.text();
@@ -44,6 +59,9 @@ const playMusic = (track) => {
     currentSong.src = "/songs/" + track
     currentSong.play()
     console.log("Playing:", currentSong.src); // Log the URL being attempted
+    playbtn.src = "/utils/Symbols/pause.svg";
+    document.getElementById("songinfo").innerHTML=track
+    document.getElementById("songtime").innerHTML="00/00"
 }
 
 async function main() {
@@ -77,14 +95,25 @@ async function main() {
     });
 
     // attack an event listener to previous, play and next
-    playbtn.addEventListener("click", ()=>{
-        if(currentSong.pause()){
-            currentSong.play()
-        }else{
-            currentSong.pause()
+    playbtn.addEventListener("click", () => {
+        if (currentSong.paused) {
+            currentSong.play();
+            playbtn.src = "/utils/Symbols/pause.svg";
+        } else {
+            currentSong.pause();
+            playbtn.src = "/utils/Symbols/playbtn.svg";
         }
-    })
+    });
+    
+    currentSong.addEventListener("timeupdate", () =>{
+        console.log(currentSong.currentTime,currentSong.duration)
+        document.getElementById("songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)}/${secondsToMinutesSeconds(currentSong.duration)}`
 
+    })
+    // let next;
+
+    // previous.addEventListener("click",() => {
+    // currentSong.src= currentSong.src[currentSong.src-1]})
     // Attach event listeners after elements are rendered
     // Array.from(songUL.getElementsByTagName("li")).forEach(e => {
     //     e.addEventListener("click", () => {
