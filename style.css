@@ -251,6 +251,7 @@ body {
     height: 2px;
     background-color: rgb(0, 0, 0);
     justify-content: center;
+    cursor: pointer;
     bottom: 0;
 }
 

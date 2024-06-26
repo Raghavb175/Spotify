@@ -126,6 +126,11 @@ async function main() {
     //     });
     // });
 }
+document.querySelector(".seekbar").addEventListener("click", e =>{
+    let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100;
+    document.querySelector(".circle").style.left = percent + "%";
+    currentSong.currentTime = ((currentSong.duration)* percent)/100
+})
 
 main().catch(error => {
     console.error('Error in main:', error); // Error handling for main function
