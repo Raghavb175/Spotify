@@ -1,27 +1,3 @@
-// async function getSongs() {
-//     let songs = [];
-//     try {
-//         let a = await fetch("http://127.0.0.1:5500/songs/");
-//         let response = await a.text();
-
-//         // Create a temporary div element to parse the HTML response
-//         let div = document.createElement("div");
-//         div.innerHTML = response;
-
-//         // Find all <a> elements within the parsed HTML
-//         let as = div.querySelectorAll('a[href$=".mp3"]');
-
-//         // Loop through each <a> element and extract the href attribute
-//         as.forEach(element => {
-//             songs.push(decodeURIComponent(element.href.split('/').pop().replace('.mp3', ''))); // Decode and extract song name
-//         });
-//     } catch (error) {
-    //         console.error('Error fetching or parsing data:', error);
-    //         return []; // Return an empty array in case of error
-    //     }
-    
-    //     return songs; // Return the array of song URLs
-    // }
     let currentSong = new Audio();
     
     function secondsToMinutesSeconds(seconds) {
