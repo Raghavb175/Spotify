@@ -173,11 +173,9 @@ body {
     cursor: pointer;
     display: none;
 }
-
 .spotify-playlist {
     padding: 16px;
 }
-
 .spotify-playlist .card {
     position: relative;
     background-color: rgb(32, 31, 31);
