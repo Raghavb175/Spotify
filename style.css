@@ -14,7 +14,6 @@ body {
     background-color: black;
 }
 
-
 .left {
     width: 25vw;
     background-color: #000000;
@@ -25,14 +24,12 @@ body {
     min-height: 19vh;
     padding: 10px;
     position: relative;
-
 }
 
 .lower-left-box {
     min-height: 75vh;
     position: relative;
 }
-
 
 .left li {
     align-items: center;
