@@ -86,11 +86,6 @@ body {
     cursor: pointer;
 }
 
-
-/* .heading h2 { 
-    justify-content: left;
-} */
-
 .footer {
     display: flex;
     color: grey;
